@@ -1,0 +1,5 @@
+@media (min-width: 1200px) {
+    img.tab{display: none;}
+    img.pc{display: block;}
+    img.m{display: none;}
+}
