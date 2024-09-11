@@ -8,12 +8,169 @@
     <link rel="stylesheet" href="./css/pc.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
     <div id="wrapper">
         <header>
-            
+            <div class="wrap">
+                <h1>
+                    <a href="#">
+                        <img src="./images/logo_m.png" alt="" class="m">
+                        <img src="./images/logo_pc.svg" alt="" class="pc">
+                    </a>
+                </h1>
+                <button type="button" class="btn-open">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <nav>
+                    <div class="nav-top">
+                        <div class="logo"><img src="./images/nav-logo.png" alt=""></div>
+                        <button type="button" class="btn-cls">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">
+                                <span>Brand</span>
+                                <span>브랜드</span>
+                            </a>
+                            <div class="sub-navi">
+                                <ul>
+                                    <li><a href="#">브랜드 소개</a></li>
+                                    <li><a href="#">공차의 약속</a></li>
+                                    <li><a href="#">브랜드 아이덴티티</a></li>
+                                    <li><a href="#">세계속의 공차</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Menu</span>
+                                <span>메뉴</span>
+                            </a>
+                            <div class="sub-navi">
+                                <ul>
+                                    <li><a href="#">주문방법</a></li>
+                                    <li><a href="#">신메뉴</a></li>
+                                    <li><a href="#">음료</a></li>
+                                    <li><a href="#">디저트</a></li>
+                                    <li><a href="#">MD상품</a></li>
+                                    <li><a href="#">티스토리</a></li>
+                                    <li><a href="#">티레시피</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Store</span>
+                                <span>매장</span>
+                            </a>
+                            <div class="sub-navi">
+                                <ul>
+                                    <li><a href="#">매장찾기</a></li>
+                                    <li><a href="#">가맹점 개설문의</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Menbership</span>
+                                <span>멤버십</span>
+                            </a>
+                            <div class="sub-navi">
+                                <ul>
+                                    <li><a href="#">공차 멤버십</a></li>
+                                    <li><a href="#">공차 카드 & e-Gift</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Benefit</span>
+                                <span>제휴 서비스</span>
+                            </a>
+                            <div class="sub-navi">
+                                <ul>
+                                    <li><a href="#">통신사 제휴</a></li>
+                                    <li><a href="#">결제 서비스</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Event&News</span>
+                                <span>이벤트&뉴스</span>
+                            </a>
+                            <div class="sub-navi">
+                                <ul>
+                                    <li><a href="#">이벤트</a></li>
+                                    <li><a href="#">공차소식</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Notice</span>
+                                <span>공지사항</span>
+                            </a>
+                            <div class="sub-navi">
+                                <ul>
+                                    <li><a href="#">공지사항</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" class="fran">
+                        <a href="#">
+                            가맹문의
+                        </a>
+                    </button>
+                </nav>
+            </div>
         </header>
     </div>
 </body>
+<script src="./jquery/jquery-3.7.1.min.js"></script>
+<script src="./jquery/jquery-ui.js"></script>
+<script>
+    const $opn = document.querySelector(".btn-open");
+    const $cls = document.querySelector(".btn-cls");
+
+    $opn.addEventListener("click", () =>{
+        $("nav").stop().animate({
+            right:"0"
+        },300)
+    });
+    $cls.addEventListener("click", () =>{
+        $("nav").stop().animate({
+            right: "-100%"
+        },300)
+    });
+
+
+    const NavMobile = function() {
+        $(".gnb>li>a").on("click",function(){
+        $(this).siblings().stop().slideToggle(300)
+        $(this).parent().siblings().find(".sub-navi").slideUp()
+        })
+    }
+    
+    const HandleResponsiveEvent = function() {
+            const winWidth = $(window).width();
+
+            if(winWidth >= 992) {
+                // $(".navi .tit").off("click");
+                NavDesktop();
+                
+            } else if(winWidth < 992) {
+                NavMobile();
+            }
+        }
+</script>
 </html>
