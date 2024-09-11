@@ -139,8 +139,9 @@ header .wrap nav .gnb li .sub-navi ul li a{
 
 }
 header .wrap nav .gnb li .sub-navi ul li a:hover{
-    background-color: rgba(189, 189, 189, 0.1);
+    background-color: rgba(189, 189, 189, 0.3);
     color: #c30e2e;
+    font-weight: 600;
 }
 header .wrap nav .fran{
     background-color: #c30e2e;

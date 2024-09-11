@@ -73,19 +73,19 @@
                             <div class="sub-navi">
                                 <ul>
                                     <li><a href="#">매장찾기</a></li>
-                                    <li><a href="#">가맹점 개설문의</a></li>
+                                    <li><a href="#">가맹점 문의</a></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
                             <a href="#">
-                                <span>Menbership</span>
+                                <span>Membership</span>
                                 <span>멤버십</span>
                             </a>
                             <div class="sub-navi">
                                 <ul>
                                     <li><a href="#">공차 멤버십</a></li>
-                                    <li><a href="#">공차 카드 & e-Gift</a></li>
+                                    <li><a href="#">공차 카드&e-Gift</a></li>
                                     <li><a href="#">FAQ</a></li>
                                 </ul>
                             </div>
@@ -139,9 +139,9 @@
 <script src="./jquery/jquery-3.7.1.min.js"></script>
 <script src="./jquery/jquery-ui.js"></script>
 <script>
+    //모바일 메뉴 오픈
     const $opn = document.querySelector(".btn-open");
     const $cls = document.querySelector(".btn-cls");
-
     $opn.addEventListener("click", () =>{
         $("nav").stop().animate({
             right:"0"
@@ -153,24 +153,46 @@
         },300)
     });
 
-
+    //모바일 nav
     const NavMobile = function() {
         $(".gnb>li>a").on("click",function(){
         $(this).siblings().stop().slideToggle(300)
         $(this).parent().siblings().find(".sub-navi").slideUp()
         })
     }
-    
-    const HandleResponsiveEvent = function() {
-            const winWidth = $(window).width();
 
-            if(winWidth >= 992) {
-                // $(".navi .tit").off("click");
-                NavDesktop();
-                
-            } else if(winWidth < 992) {
-                NavMobile();
-            }
+    const NavDesktop = function() {
+        $(".gnb>li>a").off("click");
+        $(".sub-navi ul li a").on("mouseenter",function(){
+            $(".sub-navi ul li a").css("color", "#bbbbbb");
+            $(this).css("color", "#000");
+        }).on("mouseleave", function() {
+            $(".sub-navi ul li a").css("color", "#000");
+        });
+
+        $(".gnb").on("mouseenter", function() {
+            $("nav").addClass("on");
+            console.log("mouse entered")
+        }).on("mouseleave", function() {
+            $("nav").removeClass("on");
+        })
+    };
+
+    const HandleResponsiveEvent = function() {
+        const winWidth = $(window).width();
+        if(winWidth >= 992) {
+            NavDesktop();
+            
+        } else if(winWidth < 992) {
+            NavMobile();
         }
+    }
+
+    $(window).on("resize", function() {
+        HandleResponsiveEvent();
+    });
+    HandleResponsiveEvent();
+
+
 </script>
 </html>
