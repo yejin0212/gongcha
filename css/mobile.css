@@ -138,6 +138,14 @@ header .wrap nav .gnb li .sub-navi ul li a{
     font-size: 20px;
 
 }
+header .wrap nav .gnb li:nth-child(6) .sub-navi{
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+header .wrap nav .gnb li:nth-child(6) .sub-navi ul{
+    margin-bottom: auto;
+}
 header .wrap nav .gnb li .sub-navi ul li a:hover{
     background-color: rgba(189, 189, 189, 0.3);
     color: #c30e2e;
