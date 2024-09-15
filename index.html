@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/tablet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 </head>
 
 <body>
@@ -139,19 +141,183 @@
             <div class="wrap">
                 <div class="top">
                     <div class="txt">황실에 바치는 차<br>공들여 더하는 행복, 공차</div>
-                    <div class="logo"><img src="./images/nav-logo.png" alt="" class="m"></div>
-                    <div class="logo"><img src="./images/logo_m.png" alt="" class="pc"></div>
+                    <div class="logo">
+                        <img class="m" src="./images/nav-logo.png" alt="">
+                        <img class="pc" src="./images/logo_m.png" alt="">
+                    </div>
                 </div>
                 <div class="bottom">
-                    <div class="teaimg"><img src="./images/banner_m.png" alt="" class="m"></div>
-                    <div class="teaimg"><img src="./images/banner_pc.png" alt="" class="pc"></div>
+                    <div class="teaimg">
+                        <img class="m" src="./images/banner_m.png" alt="">
+                        <img class="pc" src="./images/banner_pc.png" alt="">
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="section1">
+            <div class="title">
+                <h1>공차의 다양한 음료를 소개합니다</h1>
+            </div>
+            <div class="tab-container">
+                <div class="tabs">
+                    <div class="tab active" data-tab="1">New 시즌메뉴</div>
+                    <div class="tab" data-tab="2">베스트셀러</div>
+                    <div class="tab" data-tab="3">밀크티</div>
+                    <div class="tab" data-tab="4">스무디</div>
+                    <div class="tab" data-tab="5">오리지널티</div>
+                    <div class="tab" data-tab="6">프룻티&모어</div>
+                </div>
+                <div class="tab-content">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="tab-content-slider swiper-container first" data-slider="1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="circle">
+                                        <img src="./images/circle_m.png" alt="">
+                                    </div>
+                                    <div class="drinkImg">
+                                        <img src="./images/bestseller1.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        미니펄 트리플<br>딸기 크러쉬
+                                    </div>
+                                    <div class="exp">
+                                        딸기를 3배로 왕창 넣어 더욱 풍성해진<br>미니펄 딸기 크러쉬
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="circle">
+                                        <img src="./images/circle_m.png" alt="">
+                                    </div>
+                                    <div class="drinkImg">
+                                        <img src="./images/bestseller2.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        초코바른<br>피스타치오 스무디
+                                    </div>
+                                    <div class="exp">
+                                        자스민티를 넣은 달콤하고 고소한 피스타치오 스무디에 바삭하게 꺠지는 초코바른과 쿠키로 식감을 더한 스무디
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="circle">
+                                        <img src="./images/circle_m.png" alt="">
+                                    </div>
+                                    <div class="drinkImg">
+                                        <img src="./images/bestseller3.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        블랙 사파이어<br>포도 크림치즈폼
+                                    </div>
+                                    <div class="exp">
+                                        달콤하게 즐길 수 있는 플랙사파이어 음료를 산뜻하고 부드러운 크림치즈폼과 함꼐 시원하게 무더운 여름철에 즐길 수 있는 프룻티
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="circle">
+                                        <img src="./images/circle_m.png" alt="">
+                                    </div>
+                                    <div class="drinkImg">
+                                        <img src="./images/bestseller4.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        초코바른<br>초코 스무디
+                                    </div>
+                                    <div class="exp">
+                                        달콤한 초코 쿠키 스무디에 달콤짭조롬한 치즈폼, 컵에 둘러진 초콜렛으로 비츄얼을 더한 스무디
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="circle">
+                                        <img src="./images/circle_m.png" alt="">
+                                    </div>
+                                    <div class="drinkImg">
+                                        <img src="./images/bestseller5.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        파인애플<br>코코넛 스무디
+                                    </div>
+                                    <div class="exp">
+                                        달콤하고 상큼한 파인패션에 코코넛 밀크 스무디가 들어가 한여름의 하모니를 느낄 수 있는 시즌 한정 제품
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="circle">
+                                        <img src="./images/circle_m.png" alt="">
+                                    </div>
+                                    <div class="drinkImg">
+                                        <img src="./images/bestseller6.png" alt="">
+                                    </div>
+                                    <div class="name">
+                                        납작 복숭아<br>아이스티 블랙
+                                    </div>
+                                    <div class="exp">
+                                        직접 우린 향긋한 공차티와 달콤한 납작복숭아를 더해 에스프레소 샷과 함께 달콤 쌉싸름 시원하게 즐기는 공차 아이스티
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content-slider swiper-container" data-slider="2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Content A</div>
+                            <div class="swiper-slide">Content B</div>
+                            <div class="swiper-slide">Content B</div>
+                        </div>
+                    </div>
+                    <div class="tab-content-slider swiper-container" data-slider="3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Info X</div>
+                            <div class="swiper-slide">Info Y</div>
+                            <div class="swiper-slide">Info Z</div>
+                        </div>
+                    </div>
+                    <div class="tab-content-slider swiper-container" data-slider="4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Info X</div>
+                            <div class="swiper-slide">Info Y</div>
+                            <div class="swiper-slide">Info Z</div>
+                        </div>
+                    </div>
+                    <div class="tab-content-slider swiper-container" data-slider="5">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Info X</div>
+                            <div class="swiper-slide">Info Y</div>
+                            <div class="swiper-slide">Info Z</div>
+                        </div>
+                    </div>
+                    <div class="tab-content-slider swiper-container" data-slider="6">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Info X</div>
+                            <div class="swiper-slide">Info Y</div>
+                            <div class="swiper-slide">Info Z</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn-more">
+                <a href="#">
+                    음료 전체보기
+                </a>
+            </button>
         </div>
     </div>
 </body>
 <script src="./jquery/jquery-3.7.1.min.js"></script>
 <script src="./jquery/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     //모바일 메뉴 오픈
     const $opn = document.querySelector(".btn-open");
@@ -207,6 +373,37 @@
     });
     HandleResponsiveEvent();
 
+    //section1
+    document.addEventListener('DOMContentLoaded', function () {
+    var tabSliders = document.querySelectorAll('.tab-content-slider');
 
+    tabSliders.forEach(function (slider, index) {
+        var sliderId = index + 1;
+        var mySwiper = new Swiper(slider, {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true, 
+        
+        navigation: {
+            nextEl: ".swiper-button-next", 
+            prevEl: ".swiper-button-prev"
+        },      
+        });
+    });
+
+    document.querySelectorAll('.tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+        document.querySelector('.tab.active').classList.remove('active');
+        this.classList.add('active');
+        var targetSliderId = this.getAttribute('data-tab');
+        tabSliders.forEach(function (slider) {
+            slider.style.display = slider.getAttribute('data-slider') === targetSliderId ? 'block' : 'none';
+            slider.swiper.update();
+        });
+        });
+    });
+    });
 </script>
 </html>

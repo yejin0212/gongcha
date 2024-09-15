@@ -31,6 +31,12 @@
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot);
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.ttf) format("truetype");
 } 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 header{}
 header .wrap{
     width: 100%;
@@ -176,18 +182,16 @@ header .wrap nav .fran{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: tomato;   
+    align-items: center; 
     height: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 180px;
 }
 .banner .wrap .top .txt{
     font-family: 'Maruburi';
     font-weight: 700;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 50px;
     text-align: center;
-    margin-bottom: auto;
 }
 .banner .wrap .top .logo{
     margin-left: auto;
@@ -200,4 +204,130 @@ header .wrap nav .fran{
 .banner .wrap .bottom .teaimg img{
     width: 85%;
     height: auto;
+    filter: drop-shadow(0px 5px 5px #000000);
 }
+
+
+/* section11 */
+.section1{
+    padding: 30px 0;
+    background-color: #F3F2E8;
+}
+.section1 .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.section1 .title h1{
+    font-family: 'Maruburi';
+    font-size: 20px;
+    color: #c30e2e;
+    font-weight: 300;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+/* 탭 스타일 */
+.tab-container{
+    overflow:hidden;
+    height:100%;
+}
+.tab-content{
+    height:100%;
+    position:relative;
+}
+.tabs {
+    display: flex;
+    overflow: scroll;
+    margin-left: 30px;
+}
+.tab {
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-bottom: 20px;    
+    background-color: #f0f0f0;
+    user-select: none;
+    text-wrap: nowrap;
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+}
+.tab.active {
+    background-color: #c30e2e;
+    color: #fff;
+}
+
+/* 슬라이드 스타일 */
+.tab-content-slider {
+    display: none;
+    height: 100%;
+}
+
+.tab-content-slider.first{
+    display: block;
+}
+
+/* 슬라이드 내용 스타일 */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin:30px 0;
+}
+.swiper-slide a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.swiper-slide a .circle{
+    position:absolute;
+    top:30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: auto;
+}
+.swiper-slide a .circle img{
+}
+.swiper-slide a .drinkImg{
+    margin-bottom: 10px;
+    z-index: 1;
+}
+.swiper-slide a .drinkImg img{
+    width: 170px;
+    height: auto;
+}
+.swiper-slide a .name{
+    font-family: 'Maruburi';
+    font-size: 18px;
+    margin-bottom: 15px;
+    z-index: 2;
+}
+.swiper-slide a .exp{
+    font-family: 'Maruburi';
+    font-size: 13px;
+    z-index: 3;
+    background-color: red;
+    width: 60%;
+    margin: 0 auto;
+}
+.section1 .btn-more{
+    background-color: #c30e2e;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin: 30px auto;
+}
+.section1 .btn-more a{
+    font-family: 'Maruburi';
+    font-size: 16px;
+    color: #fff;
+    font-weight: 100;
+}
+
+

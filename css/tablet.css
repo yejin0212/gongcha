@@ -1,3 +1,21 @@
-@media (min-width: 600px){
-    
+@media (min-width:750px)and (max-width:1199px){
+    .banner .wrap .top{
+        display: flex;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: center; 
+        width: 80%;
+        height: unset;
+        margin: 0 auto;
+        margin-bottom:50px;
+        margin-top: 100px;
+    }
+    .banner .wrap .top .logo{
+        margin-left: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .banner .wrap .top .logo img{
+        width: 50px;
+    }
 }
