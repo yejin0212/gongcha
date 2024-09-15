@@ -93,10 +93,11 @@
         /* height: 560px; */
         height: 0;
         background-color:#fff;
-        box-shadow: 0 5px 5px -5px #969696;
+        box-shadow: 0 5px 10px -5px #969696;
         transition: height 0.2s;
         position: absolute;    
-        border-bottom-left-radius: 16px;    
+        border-bottom-left-radius: 16px;   
+        border-bottom-right-radius: 16px; 
         top: 100%;
         left: 0;
     }
@@ -209,5 +210,24 @@
         font-size:17px;
         margin: 20px 0; 
         margin-left:35px;
+    }
+
+    /* banner */
+    .banner{}
+    .banner .wrap{}
+    .banner .wrap .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner .wrap .top .txt{
+        font-family: 'Maruburi';
+        font-weight: 700;
+    }
+    .banner .wrap .top .logo{}
+    .banner .wrap .bottom{}
+    .banner .wrap .bottom .teaimg{}
+    .banner .wrap .bottom .teaimg img{
     }
 }
