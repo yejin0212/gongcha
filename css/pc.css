@@ -456,4 +456,61 @@
         font-family:  'Pretendard-Regular';
         font-size: 18px;
     }    
+
+    /* section2 */
+    .section2{
+        padding: 50px 20px;
+    }
+    .section2 .wrap{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .section2 .wrap .txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:baseline;
+        margin-right: 80px;
+    }
+    .section2 .wrap .txt h1{
+        font-family: 'Maruburi';
+        font-weight: 300;
+        color: #c30e2e;
+        text-align: start;
+        margin-bottom: 30px;
+        font-size: 45px;
+    }
+    .section2 .wrap .txt h2{
+        font-family: 'Maruburi';
+        font-size: 18px;
+        font-weight: 100;
+        margin-bottom: 30px;
+    }
+    .section2 .wrap .txt .btn-discover{
+        position:unset;
+        z-index: unset;
+    }
+    .section2 .wrap .txt .btn-discover a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section2 .wrap .txt .btn-discover a span{
+        border-radius: 50%;
+        border: 2px dashed #c30e2e;
+        padding: 10px;
+        margin-right: 10px;
+        color: #000;
+        font-size: 25px;
+    }
+    .section2 .wrap .txt .btn-discover a p{
+        color: #c30e2e;
+        font-size: 14px;
+    }
+    .section2 .wrap .thumb{
+    }
+    .section2 .wrap .thumb .storeImg{}
+    .section2 .wrap .thumb .storeImg img{
+    }
 }

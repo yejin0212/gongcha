@@ -171,12 +171,13 @@ header .wrap nav .fran{
 /* banner */
 .banner{
     border-bottom: 1px solid #c30e2e;
+    padding: 0 20px;
 }
 .banner .wrap{
     display: flex;
     flex-direction: column; 
     justify-content:space-between;
-    padding: 78px 0;
+    margin: 78px 0;
 }
 .banner .wrap .top{
     display: flex;
@@ -221,7 +222,7 @@ header .wrap nav .fran{
 }
 .section1 .title h1{
     font-family: 'Maruburi';
-    font-size: 20px;
+    font-size: 23px;
     color: #c30e2e;
     font-weight: 300;
 }
@@ -337,4 +338,56 @@ header .wrap nav .fran{
     display: none;
 }
 
-
+/* section2 */
+.section2{
+    padding: 30px 20px;
+}
+.section2 .wrap{
+    position: relative;
+}
+.section2 .wrap .txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section2 .wrap .txt h1{
+    font-family: 'Maruburi';
+    font-weight: 300;
+    color: #c30e2e;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.section2 .wrap .txt h2{
+    font-family: 'Maruburi';
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+.section2 .wrap .txt .btn-discover{
+    position: absolute;
+    top:80%;
+    left: 30%;
+    z-index: 8;
+}
+.section2 .wrap .txt .btn-discover a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2 .wrap .txt .btn-discover a span{
+    border-radius: 50%;
+    border: 2px dashed #fff;
+    padding: 5px;
+    margin-right: 10px;
+    color: #fff;
+}
+.section2 .wrap .txt .btn-discover a p{
+    color: #fff;
+    font-size: 14px;
+}
+.section2 .wrap .thumb{
+}
+.section2 .wrap .thumb .storeImg{}
+.section2 .wrap .thumb .storeImg img{
+}
