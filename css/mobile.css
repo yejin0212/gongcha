@@ -258,6 +258,7 @@ header .wrap nav .fran{
 .tab.active {
     background-color: #c30e2e;
     color: #fff;
+    box-shadow: 0 10px 10px -5px #474747;
 }
 
 /* 슬라이드 스타일 */
@@ -311,23 +312,29 @@ header .wrap nav .fran{
 }
 .swiper-slide a .exp{
     font-family: 'Maruburi';
-    font-size: 13px;
+    font-size: 14px;
     z-index: 3;
-    background-color: red;
     width: 60%;
     margin: 0 auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
 }
 .section1 .btn-more{
     background-color: #c30e2e;
     padding: 10px 20px;
     border-radius: 50px;
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
 }
 .section1 .btn-more a{
     font-family: 'Maruburi';
     font-size: 16px;
     color: #fff;
     font-weight: 100;
+}
+.section1 .btn-click{
+    display: none;
 }
 
 

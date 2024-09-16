@@ -40,10 +40,11 @@
         font-style: normal;
     }
     #wrapper{
-        padding: 0 30px;
+        padding: unset;
     }
     header{
-        position: relative
+        position: relative;
+        padding: 0 30px;
     }
 
     
@@ -259,4 +260,200 @@
         width: 85%;
         height: auto;
     }
+
+
+    /* section1 */
+    .section1{
+        padding: 30px 0;
+        background-color: #F3F2E8;
+    }
+    .section1 .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .section1 .title h1{
+        font-family: 'Maruburi';
+        font-size: 32px;
+        color: #c30e2e;
+        font-weight: 300;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+      }
+    
+    /* 탭 스타일 */
+    .tab-container{
+        overflow:hidden;
+        height:100%;
+    }
+    .tab-content{
+        height:100%;
+        position:relative;
+    }
+    .tabs {
+        display: flex;
+        overflow: unset;
+        margin-left: unset;
+        justify-content: center;
+        align-items: center;
+    }
+    .tab {
+        display: flex;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin-bottom: 20px;    
+        background-color: unset;
+        user-select: none;
+        text-wrap: nowrap;
+        font-family: 'Pretendard-Regular';
+        font-size: 18px;
+    }
+    .tab.active {
+        background-color: unset;
+        color: #c30e2e;
+        box-shadow:unset;
+    }
+    
+    /* 슬라이드 스타일 */
+    .tab-content-slider {
+        display: none;
+        height: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .tab-content-slider.first{
+        display: block;
+    }
+    
+    /* 슬라이드 내용 스타일 */
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin:30px 0;
+        filter: grayscale();
+    }
+    .swiper-slide-active{
+        filter: grayscale(0);
+        .name{
+            color: #c30e2e;
+            font-weight: 600;
+        }
+        .circle{
+            filter: invert(14%) sepia(64%) saturate(5114%) hue-rotate(341deg) brightness(92%) contrast(97%);
+        }
+    }
+    .swiper-slide a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .swiper-slide a .circle{
+        position:absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width:unset;
+        height: unset;
+        width: 400px;
+    }
+    .swiper-slide a .circle img{
+    }
+    .swiper-slide a .drinkImg{
+        margin-bottom: 10px;
+        z-index: 1;
+        display: block;
+    }
+    .swiper-slide a .drinkImg img{
+        width: 450px;
+        height:auto;
+    }
+    .swiper-slide a .txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        position: absolute;
+        left: 70%;
+        top: 45%;
+    }
+    .swiper-slide a .name{
+        font-family: 'Maruburi';
+        font-size: 20px;
+        margin-bottom: 15px;
+        z-index: 2;
+    }
+    .swiper-slide a .exp{
+        font-family: 'Pretendard-Regular';
+        font-size: 14px;
+        text-align: left;
+        z-index: 3;
+        width: 100%;
+        margin: unset;
+        margin-left: 50px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+    }
+    .section1 .btn-more{
+        display: none;
+        background-color: #c30e2e;
+        padding: 10px 20px;
+        border-radius: 50px;
+        margin: 30px auto 0 auto;
+    }
+    .section1 .btn-more a{
+        font-family: 'Maruburi';
+        font-size: 16px;
+        color: #fff;
+        font-weight: 100;
+    }
+
+    .section1 .swiper-button-next{
+        position: absolute;
+        left: 65%;
+        top:70%;
+    }
+    .section1 .swiper-button-next::after{
+        font-size: 25px;
+        color: #000;
+        font-weight: bold;
+    }
+    .section1 .swiper-button-prev{
+        position: absolute;
+        left: 34%;
+        top: 70%;
+    }
+    .section1 .swiper-button-prev::after{
+        font-size: 25px;
+        color: #000;
+        font-weight: bold;
+    }
+    .section1 .swiper-slide a:hover .btn-click{
+        display: block;
+    }
+    .section1 .btn-click{
+        position: absolute;
+        left: 40%;
+        top: 70%;
+        display: block;
+        background-color: #c30e2e;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    .section1 .btn-click a{
+        color: #fff;
+        font-family:  'Pretendard-Regular';
+        font-size: 18px;
+    }    
 }
