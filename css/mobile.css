@@ -397,6 +397,8 @@ header .wrap nav .fran{
 .section3{
     
 }   
+}
+>>>>>>> 07158798388e50cb61cef3bb3d0d5540e13285ed
 .section3 .swiper{
     background-image: url(../images/franchise.jpg);
     width: 100%;
@@ -404,6 +406,7 @@ header .wrap nav .fran{
     background-size: cover;
     filter: grayscale();
     position: relative;
+<<<<<<< HEAD
     
 }
 .section3 .swiper::after{
@@ -415,6 +418,8 @@ header .wrap nav .fran{
     position: absolute;
     top: 0;
     left: 0;
+=======
+>>>>>>> 07158798388e50cb61cef3bb3d0d5540e13285ed
 }
 .section3 .swiper .swiper-wrapper{}
 .section3 .swiper .swiper-wrapper .swiper-slide{
