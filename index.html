@@ -640,6 +640,55 @@
                 </div>
             </div>
         </div>
+        <div class="section3">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">payments</span>
+                        </div>
+                        <div class="dot"></div>
+                        <p>공차 개설 비용</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">handshake</span>
+                        </div>
+                        <div class="dot"></div>
+                        <p>가맹점 개설 조건 및 절차안내</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">diversity_3</span>
+                        </div>
+                        <div class="dot"></div>
+                        <p>가맹점 상담신청</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">handyman</span>
+                        </div>
+                        <div class="dot"></div>
+                        <p>인테리어</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">trophy</span>
+                        </div>
+                        <div class="dot"></div>
+                        <p>공차 경쟁력</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">help</span>
+                        </div>
+                        <div class="dot"></div>
+                        <p>가맹점 F&Q</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./jquery/jquery-3.7.1.min.js"></script>
@@ -699,6 +748,19 @@
             });
             });
             });
+
+
+            //section3 슬라이드
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                centeredSlides: true,
+                loop:true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                });
          }
 
         const NavDesktop = function() {

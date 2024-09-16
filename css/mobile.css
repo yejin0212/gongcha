@@ -391,3 +391,30 @@ header .wrap nav .fran{
 .section2 .wrap .thumb .storeImg{}
 .section2 .wrap .thumb .storeImg img{
 }
+
+
+/* section3 */
+.section3{
+        
+    background-image: url(../images/franchise.jpg);
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    filter: grayscale();
+}
+.section3 .swiper{
+}
+.section3 .swiper .swiper-wrapper{}
+.section3 .swiper .swiper-wrapper .swiper-slide{
+    display: flex;
+    flex-direction: column;
+}
+.section3 .swiper .swiper-wrapper .swiper-slide .icon{}
+.section3 .swiper .swiper-wrapper .swiper-slide .icon span{}
+.section3 .swiper .swiper-wrapper .swiper-slide .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.section3 .swiper .swiper-wrapper .swiper-slide .p{}
