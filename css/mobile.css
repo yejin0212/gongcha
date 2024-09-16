@@ -395,14 +395,14 @@ header .wrap nav .fran{
 
 /* section3 */
 .section3{
-        
+}
+.section3 .swiper{
     background-image: url(../images/franchise.jpg);
     width: 100%;
     height: auto;
     background-size: cover;
     filter: grayscale();
-}
-.section3 .swiper{
+    position: relative;
 }
 .section3 .swiper .swiper-wrapper{}
 .section3 .swiper .swiper-wrapper .swiper-slide{
