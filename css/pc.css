@@ -1003,4 +1003,52 @@
         width:17%;
         padding-bottom: 50px;
     }
+
+    /* footer */
+    footer{
+        background-color: #575757;
+        border-top: 6px solid #C30E2E;
+        padding: 20px;
+    }
+    footer .wrap{}
+    footer .wrap .top{
+        display: flex;
+        flex-direction: unset;
+        justify-content: space-between;
+    }
+    footer .wrap .top .logo{}
+    footer .wrap .top .logo img{
+        width: 173px;
+        margin-left: unset;
+    }
+    footer .wrap .top .company{
+        display: flex;
+        margin: unset;
+    }
+    footer .wrap .top .company li{
+        margin-left: 6px;
+    }
+    footer .wrap .top .company li a{
+        color: #fff;
+        font-size: 13px;
+    }
+    footer .wrap .top .company li span{
+        color: #fff;
+        font-size:12px;
+    }
+    footer .wrap .bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: left;
+        margin-top: 20px;
+    }
+    footer .wrap .bottom p{
+        color: #fff;
+        font-size: 9px;
+    }
+    footer .wrap .bottom p:first-child{
+        margin-bottom: 20px;
+    }
 }
