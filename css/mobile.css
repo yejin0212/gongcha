@@ -69,41 +69,7 @@ h2.pc{display: none;}
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot);
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.ttf) format("truetype");
 }
-@font-face {
-    font-family: 'NanumSquareNeoLight';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-aLt.ttf) format("truetype");
-}
 
-@font-face {
-    font-family: 'NanumSquareNeo';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeoBold';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeoExtraBold';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-dEb.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeoHeavy';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-eHv.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeoVariable';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeo-Variable.ttf) format("truetype");
-}
 header{}
 header .wrap{
     width: 100%;
@@ -276,7 +242,7 @@ header .wrap nav .fran{
 }
 
 
-/* section11 */
+/* section1 */
 .section1{
     padding: 30px 0;
     background-color: #F3F2E8;
@@ -293,53 +259,56 @@ header .wrap nav .fran{
     color: #c30e2e;
     font-weight: 300;
 }
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
+.section1 .Swiper1 {
+    height: 0;
+    overflow: hidden;
+}
 
-/* 탭 스타일 */
-.tab-container{
+.section1 .Swiper1.show{
+    height: unset;
+}
+
+.section1 .tab-container{
     overflow:hidden;
     height:100%;
 }
-.tab-content{
-    height:100%;
-    position:relative;
-}
-.tabs {
+.section1 .tab-container .tabs {
     display: flex;
     overflow: scroll;
     margin-left: 30px;
 }
-.tab {
+.section1 .tab-container .tab-content{
+    height:100%;
+    position:relative;
+}
+
+.tabs::-webkit-scrollbar{
+    width: 100%;
+    height: 3px;
+    background-color: #00000011
+    ;
+}
+.tabs::-webkit-scrollbar-thumb{
+    width: 10%;
+    height: 3px;
+    background-color: #c30e2e;
+}
+.section1 .tab-container .tab {
     display: flex;
     cursor: pointer;
     padding: 10px 20px;
     margin-bottom: 20px;    
-    background-color: #f0f0f0;
     user-select: none;
     text-wrap: nowrap;
     font-family: 'NanumSquareNeo';
     font-size: 20px;
 }
-.tab.active {
+.section1 .tab-container .tab:first-child {
     background-color: #c30e2e;
     color: #fff;
     box-shadow: 0 10px 10px -5px #474747;
 }
 
-/* 슬라이드 스타일 */
-.tab-content-slider {
-    display: none;
-    height: 100%;
-}
-
-.tab-content-slider.first{
-    display: block;
-}
-
-/* 슬라이드 내용 스타일 */
 .section1 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -347,7 +316,7 @@ header .wrap nav .fran{
     justify-content: center;
     align-items: center;
     position: relative;
-    margin:30px 0;
+    margin:40px 0;
 }
 .section1 .swiper-slide a{
     display: flex;
@@ -363,6 +332,7 @@ header .wrap nav .fran{
     height: auto;
 }
 .section1 .swiper-slide a .circle img{
+    opacity: 0.3;
 }
 .section1 .swiper-slide a .drinkImg{
     margin-bottom: 10px;
@@ -377,6 +347,7 @@ header .wrap nav .fran{
     font-size: 18px;
     margin-bottom: 15px;
     z-index: 2;
+    margin-left:unset;
 }
 .section1 .swiper-slide a .exp{
     font-family: 'Maruburi';
@@ -405,10 +376,20 @@ header .wrap nav .fran{
 .section1 .btn-click{
     display: none;
 }
+.section1 .swiper-button-next::after{
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+}
+.section1 .swiper-button-prev::after{
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+}
 
 /* section2 */
 .section2{
-    padding: 30px 20px;
+    padding: 50px 20px 80px 20px; 
 }
 .section2 .wrap{
     position: relative;
@@ -590,7 +571,7 @@ header .wrap nav .fran{
 
 /* section4 */
 .section4{
-    padding: 30px 20px;
+    padding: 50px 20px;
 }
 .section4 .wrap{}
 .section4 .wrap .store{
@@ -685,7 +666,7 @@ header .wrap nav .fran{
 }
 .section5 .wrap .txt h2{
     color: #fff;
-    font-family:'NanumSquareNeo';
+    font-family:'NanumSquareNeoLight';
     font-size: 14px;
     line-height: 20px;
 }
@@ -747,7 +728,7 @@ header .wrap nav .fran{
     padding: 23px 20px;
 }
 .section6 .wrap .event{
-    border-top: 1px solid #C1C1C1;
+    border-top: 2px solid #C1C1C1;
     padding-bottom:50px;
 }
 .section6 .wrap .event .top{
@@ -805,7 +786,7 @@ header .wrap nav .fran{
 .section6 .wrap .event .swiper .swiper-wrapper .swiper-slide .content .date{
     font-size: 10px;
     color: #868686;
-    font-family: 'NanumSquareNeo';
+    font-family: 'NanumSquareNeoBold';
     margin-bottom: 29px;
 }
 .section6 .wrap .news{
@@ -867,8 +848,9 @@ header .wrap nav .fran{
 .section6 .wrap .news .swiper .swiper-wrapper .swiper-slide .content .date{
     font-size: 10px;
     color: #868686;
-    font-family: 'NanumSquareNeo';
+    font-family: 'NanumSquareNeoBold';
     margin-bottom: 16px;
+    text-align: center;
 }
 .section6 .swiper-pagination-bullet-active{
     background-color: #000000;

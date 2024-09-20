@@ -158,18 +158,18 @@
             </div>
             <div class="tab-container">
                 <div class="tabs">
-                    <div class="tab active" data-tab="1">New 시즌메뉴</div>
-                    <div class="tab" data-tab="2">베스트셀러</div>
-                    <div class="tab" data-tab="3">밀크티</div>
-                    <div class="tab" data-tab="4">스무디</div>
-                    <div class="tab" data-tab="5">오리지널티</div>
-                    <div class="tab" data-tab="6">프룻티&모어</div>
-                    <div class="tab" data-tab="7">커피</div>
+                    <div class="tab">New 시즌메뉴</div>
+                    <div class="tab">베스트셀러</div>
+                    <div class="tab">밀크티</div>
+                    <div class="tab">스무디</div>
+                    <div class="tab">오리지널티</div>
+                    <div class="tab">프룻티&모어</div>
+                    <div class="tab">커피</div>
                 </div>
                 <div class="tab-content">
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="tab-content-slider swiper-container first" data-slider="1">
+                    <div class="swiper Swiper1 s1 show">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -233,7 +233,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-content-slider swiper-container" data-slider="2">
+                    <div class="swiper Swiper1 s2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -287,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-content-slider swiper-container" data-slider="3">
+                    <div class="swiper Swiper1 s3">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -351,7 +351,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-content-slider swiper-container" data-slider="4">
+                    <div class="swiper Swiper1 s4">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -415,7 +415,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-content-slider swiper-container" data-slider="5">
+                    <div class="swiper Swiper1 s5">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -479,7 +479,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-content-slider swiper-container" data-slider="6">
+                    <div class="swiper Swiper1 s6">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -543,7 +543,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-content-slider swiper-container" data-slider="7">
+                    <div class="swiper Swiper1 s7">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#">
@@ -640,7 +640,7 @@
             </div>
         </div>
         <div class="section3">
-            <div class="swiper mySwiper">
+            <div class="swiper Swiper3">
                 <p class="pc">공들여 맛있는 차, 공차</p>
                 <h1>가맹점 개설 문의</h1>
                 <p class="pc">프리미엄 잎 차를 고르고 공차만의 까다로운 노하우로 우리고<br>다양하고 새로운 맛을 더해 한 잔의 완벽한 공차를 바칩니다.</p>
@@ -977,45 +977,11 @@
     //모바일 nav
     const NavMobile = function() {
         $(".gnb>li>a").on("click",function(){
-        $(this).siblings().stop().slideToggle(300)
-        $(this).parent().siblings().find(".sub-navi").slideUp()
-        })
-
-        //section1 음료 슬라이드
-        document.addEventListener('DOMContentLoaded', function () {
-        var tabSliders = document.querySelectorAll('.tab-content-slider');
-
-        tabSliders.forEach(function (slider, index) {
-            var sliderId = index + 1;
-            var mySwiper = new Swiper(slider, {
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true, 
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next", 
-                prevEl: ".swiper-button-prev"
-            },      
-            });
+            $(this).siblings().stop().slideToggle(300)
+            $(this).parent().siblings().find(".sub-navi").slideUp()
         });
-        //section1 탭
-        document.querySelectorAll('.tab').forEach(function (tab) {
-            tab.addEventListener('click', function () {
-            document.querySelector('.tab.active').classList.remove('active');
-            this.classList.add('active');
-            var targetSliderId = this.getAttribute('data-tab');
-            tabSliders.forEach(function (slider) {
-                slider.style.display = slider.getAttribute('data-slider') === targetSliderId ? 'block' : 'none';
-                slider.swiper.update();
-            });
-            });
-            });
-        });
-
         //section3 가맹점 슬라이드
-        var swiper = new Swiper(".section3 .mySwiper", {
+        var swiper = new Swiper(".section3 .Swiper3", {
             slidesPerView: 3,
             spaceBetween: 0,
             centeredSlides: true,
@@ -1023,8 +989,31 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
+            },
+            breakpoints: {
+                
+                1200: {
+                    slidesPerView: 6,
+                    loop: false,
+                    centeredSlides: false,
+                    spaceBetween: 0,
+                }
             }
-            });
+            
+        });
+        //section1 음료 탭
+        $(".tab").on("click", function(){
+            const i = $(this).index();
+            $(".Swiper1").removeClass("show");
+            $(".Swiper1").eq(i).addClass("show");
+            $(".tab").eq(i).css("background-color","#c30e2e")
+            $(".tab").eq(i).css("color","#fff")
+            $(".tab").eq(i).css("box-shadow"," 0 10px 10px -5px #474747")
+            $(".tab").eq(i).siblings().css("background-color","unset")
+            $(".tab").eq(i).siblings().css("color","#000")
+            $(".tab").eq(i).siblings().css("box-shadow","unset")
+        }
+        )
              
     }
         
@@ -1045,39 +1034,16 @@
             $("nav").removeClass("on");
         })
 
-        //section1
-        document.addEventListener('DOMContentLoaded', function () {
-        var tabSliders = document.querySelectorAll('.tab-content-slider');
-
-        tabSliders.forEach(function (slider, index) {
-            var sliderId = index + 1;
-            var mySwiper = new Swiper(slider, {
-            observer: true,
-            observeParents: true,
-            slidesPerView: 3,
-            spaceBetween: 0,
-            centeredSlides: true, 
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next", 
-                prevEl: ".swiper-button-prev"
-            },      
-            });
+        //section1 음료 탭
+        $(".tab").on("click", function(){
+            const i = $(this).index();
+            $(".Swiper1").removeClass("show");
+            $(".Swiper1").eq(i).addClass("show");
+            $(".tab").eq(i).css("color","#c30e2e")
+            $(".tab").eq(i).css("background-color","unset")
+            $(".tab").eq(i).css("box-shadow","unset")
+            $(".tab").eq(i).siblings().css("color","#000")
         });
-
-        document.querySelectorAll('.tab').forEach(function (tab) {
-            tab.addEventListener('click', function () {
-            document.querySelector('.tab.active').classList.remove('active');
-            this.classList.add('active');
-            var targetSliderId = this.getAttribute('data-tab');
-            tabSliders.forEach(function (slider) {
-                slider.style.display = slider.getAttribute('data-slider') === targetSliderId ? 'block' : 'none';
-                slider.swiper.update();
-            });
-            });
-            });
-        });
-         
     };
     const HandleResponsiveEvent = function() {
         const winWidth = $(window).width();
@@ -1094,6 +1060,33 @@
     });
     HandleResponsiveEvent();
 
+    //section1 음료 슬라이드
+    var swiper = new Swiper(".section1 .Swiper1", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 0,
+            }
+        }
+    });
+    
+    
     // section6 슬라이드
     var swiper = new Swiper(".event .mySwiper", {
         slidesPerView: 1,
@@ -1125,5 +1118,4 @@
    
     
 </script>
->>>>>>> 398c37c829a3e6def638b0561287291b7bee14b8
 </html>
