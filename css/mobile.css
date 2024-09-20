@@ -1,8 +1,6 @@
 .pc{display: none;}
-.m{display: block;}
-<<<<<<< HEAD
+.m{display: block;} 
 #wrapper{max-width: 1920px; margin: 0 auto; min-width: 320px; }
-=======
 .tab{display: none;}
 h2.m{display: block;}
 h2.pc{display: none;}
@@ -931,4 +929,3 @@ footer .wrap .bottom p{
     color: #fff;
     font-size: 7px;
 }
->>>>>>> 398c37c829a3e6def638b0561287291b7bee14b8

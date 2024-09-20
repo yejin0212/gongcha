@@ -2,8 +2,6 @@
     img.tab{display: none;}
     img.pc{display: block;}
     img.m{display: none;}
-<<<<<<< HEAD
-=======
     p.pc{display: block;}
     p.m{display: none;}
     h2.m{display: none;}
@@ -1052,6 +1050,5 @@
     }
     footer .wrap .bottom p:first-child{
         margin-bottom: 20px;
-    }
->>>>>>> 398c37c829a3e6def638b0561287291b7bee14b8
+    } 
 }
