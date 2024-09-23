@@ -210,7 +210,7 @@ header .wrap nav .fran{
     display: flex;
     flex-direction: column; 
     justify-content:space-between;
-    margin: 78px 0;
+    padding: 78px 0;
 }
 .banner .wrap .top{
     display: flex;
@@ -232,7 +232,9 @@ header .wrap nav .fran{
     margin-right: 15%;
     margin-bottom: 10px;
 }
-.banner .wrap .bottom{}
+.banner .wrap .bottom{
+    position: relative;
+}
 .banner .wrap .bottom .teaimg{
 }
 .banner .wrap .bottom .teaimg img{
@@ -240,7 +242,19 @@ header .wrap nav .fran{
     height: auto;
     filter: drop-shadow(0px 5px 5px #000000);
 }
-
+.banner .wrap .bottom .beverage{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+.banner .wrap .bottom .beverage.active{
+    opacity: 0;
+}
+.banner .wrap .bottom .beverage img{
+    width: 170px;
+    height: auto;
+}
 
 /* section1 */
 .section1{
@@ -262,6 +276,10 @@ header .wrap nav .fran{
 .section1 .Swiper1 {
     height: 0;
     overflow: hidden;
+    opacity: 0;
+}
+.section1 .Swiper1.active{
+    opacity: 1;
 }
 
 .section1 .Swiper1.show{
@@ -271,6 +289,7 @@ header .wrap nav .fran{
 .section1 .tab-container{
     overflow:hidden;
     height:100%;
+    /* opacity: 0; */
 }
 .section1 .tab-container .tabs {
     display: flex;

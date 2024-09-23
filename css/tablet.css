@@ -1,0 +1,40 @@
+@media (min-width: 450px) {
+    .banner .wrap .bottom .beverage img{
+        width: 200px;
+    }
+    .section1 .swiper-slide a .drinkImg img{
+        width: 200px;
+    }
+}
+@media (min-width: 530px) {
+    .banner .wrap .bottom .beverage img{
+        width: 230px;
+    }
+    .section1 .swiper-slide a .drinkImg img{
+        width: 230px;
+    }
+}
+@media (min-width: 600px) {
+    .banner .wrap .bottom .beverage img{
+        width: 250px;
+    }
+    .section1 .swiper-slide a .drinkImg img{
+        width: 250px;
+    }
+}
+@media (min-width: 820px) {
+    .banner .wrap .bottom .beverage img{
+        width: 300px;
+    }
+    .section1 .swiper-slide a .drinkImg img{
+        width: 300px;
+    }
+}
+@media (min-width: 1000px) {
+    .banner .wrap .bottom .beverage img{
+        width: 350px;
+    }
+    .section1 .swiper-slide a .drinkImg img{
+        width: 350px;
+    }
+}

@@ -140,6 +140,7 @@
         border-bottom-right-radius: 16px; 
         top: 100%;
         left: 0;
+        z-index: 1;
     }
 
     header nav.on::after{
@@ -165,7 +166,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        z-index: 1;
+        z-index: 2;
         height: 100%;
     }
     header .wrap nav .gnb li{
@@ -297,7 +298,17 @@
         width: 85%;
         height: auto;
     }
-
+    .banner .wrap .bottom .beverage{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100px; 
+    }
+    .banner .wrap .bottom .beverage img{
+        width: 450px;
+        height:auto;
+    }
+    
 
     /* section1 */
     .section1{
