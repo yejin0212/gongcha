@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -148,8 +149,8 @@
                 </div>
                 <div class="bottom">
                     <div class="teaimg">
-                        <img class="m" src="./images/banner_m.png" alt="배너 차 이미지">
-                        <img class="pc" src="./images/banner_pc.png" alt="배너 차 이미지">
+                        <img class="m" src="./images/banner_m.png" alt="배너 차 이미지" data-aos="zoom-in"  data-aos-offset="50">
+                        <img class="pc" src="./images/banner_pc.png" alt="배너 차 이미지" data-aos="zoom-in" data-aos-offset="50">
                     </div>
                     <div class="beverage">
                         <img src="./images/new1.png" alt="">
@@ -639,12 +640,17 @@
                 </div>
                 <div class="thumb">
                     <div class="storeImg">
-                        <img src="./images/store.png" alt="공차 매장">
+                        <img src="./images/store.png" alt="공차 매장"
+                            data-aos="fade-up"
+                            data-aos-duration="1000">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section3">
+        <div class="section3"
+            data-aos="fade-left"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000">
             <div class="swiper Swiper3">
                 <p class="pc">공들여 맛있는 차, 공차</p>
                 <h1>가맹점 개설 문의</h1>
@@ -963,7 +969,9 @@
 <script src="./jquery/jquery-3.7.1.min.js"></script>
 <script src="./jquery/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    AOS.init();
     //모바일 메뉴 오픈
     const $opn = document.querySelector(".btn-open");
     const $cls = document.querySelector(".btn-cls");
