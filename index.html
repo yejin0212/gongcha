@@ -648,10 +648,7 @@
                 </div>
             </div>
         </div>
-        <div class="section3"
-            data-aos="fade-left"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-duration="1000">
+        <div class="section3" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
             <div class="swiper Swiper3">
                 <p class="pc">공들여 맛있는 차, 공차</p>
                 <h1>가맹점 개설 문의</h1>
@@ -779,10 +776,12 @@
                                 <p>공차 이벤트</p>
                             </div>
                             <button type="button" class="more">
-                                <p>More</p>
-                                <span class="material-symbols-outlined">
-                                    arrow_forward_ios
-                                </span>
+                                <a href="#">
+                                    <p>More</p>
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </span>
+                                </a>
                             </button>
                         </div>
                         <div class="swiper mySwiper">
@@ -851,10 +850,12 @@
                                 <p>공차 뉴스</p>
                             </div>
                             <button type="button" class="more">
-                                <p>More</p>
-                                <span class="material-symbols-outlined">
-                                    arrow_forward_ios
-                                </span>
+                                <a href="#">
+                                    <p>More</p>
+                                    <span class="material-symbols-outlined">
+                                        arrow_forward_ios
+                                    </span>
+                                </a>
                             </button>
                         </div>
                         <div class="swiper mySwiper">
@@ -987,93 +988,16 @@
         },300)
     });
     
-    //모바일 적용 js
-    //모바일 nav
-    const NavMobile = function() {
-        $(".gnb>li>a").on("click",function(){
-            $(this).siblings().stop().slideToggle(300)
-            $(this).parent().siblings().find(".sub-navi").slideUp()
-        });
-        //section3 가맹점 슬라이드
-        var swiper3 = new Swiper(".section3 .Swiper3", {
-            slidesPerView: 3,
-            spaceBetween: 0,
-            centeredSlides: true,
-            loop:true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                
-                1200: {
-                    slidesPerView: 6,
-                    loop: false,
-                    centeredSlides: false,
-                    spaceBetween: 0,
-                }
-            }
-            
-        });
-        //section1 음료 탭
-        $(".tab").on("click", function(){
-            const i = $(this).index();
-            $(".Swiper1").removeClass("show");
-            $(".Swiper1").eq(i).addClass("show");
-            $(".tab").eq(i).css("background-color","#c30e2e")
-            $(".tab").eq(i).css("color","#fff")
-            $(".tab").eq(i).css("box-shadow"," 0 10px 10px -5px #474747")
-            $(".tab").eq(i).siblings().css("background-color","unset")
-            $(".tab").eq(i).siblings().css("color","#000")
-            $(".tab").eq(i).siblings().css("box-shadow","unset")
-        }
-        )
-             
-    }
-        
-    //데스크탑 적용 js
-    const NavDesktop = function() {
-        $(".gnb>li>a").off("click");
-        //메뉴 슬라이드
-        $(".sub-navi ul li a").on("mouseenter",function(){
-            $(".sub-navi ul li a").css("color", "#bbbbbb");
-            $(this).css("color", "#000");
-        }).on("mouseleave", function() {
-            $(".sub-navi ul li a").css("color", "#000");
-        });
-        $(".gnb").on("mouseenter", function() {
-            $("nav").addClass("on");
-            console.log("mouse entered")
-        }).on("mouseleave", function() {
-            $("nav").removeClass("on");
-        })
-
-        //section1 음료 탭
-        $(".tab").on("click", function(){
+    // section1 음료 탭
+    $(".tab").on("click", function(){
             const i = $(this).index();
             $(".Swiper1").removeClass("show");
             $(".Swiper1").eq(i).addClass("show");
             $(".tab").eq(i).css("color","#c30e2e")
-            $(".tab").eq(i).css("background-color","unset")
-            $(".tab").eq(i).css("box-shadow","unset")
             $(".tab").eq(i).siblings().css("color","#000")
-        });
-    };
-    const HandleResponsiveEvent = function() {
-        const winWidth = $(window).width();
-        if(winWidth >= 992) {
-            NavDesktop();
-            
-        } else if(winWidth < 992) {
-            NavMobile();
-        }
-    }
-
-    $(window).on("resize", function() {
-        HandleResponsiveEvent();
-    });
-    HandleResponsiveEvent();
-
+            }
+        )
+    
     //section1 음료 슬라이드
     var swiper1 = new Swiper(".section1 .Swiper1", {
         slidesPerView: 1,
@@ -1093,14 +1017,35 @@
                 slidesPerView: 1,
                 spaceBetween: 20,
             },
+            800: {
+                slidesPerView: 2,
+            },
             1200: {
                 slidesPerView: 3,
                 spaceBetween: 0,
             }
         }
     });
-    
-    
+    //section3 가맹점 슬라이드
+    var swiper3 = new Swiper(".section3 .Swiper3", {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop:true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 6,
+                    loop: false,
+                    centeredSlides: false,
+                    spaceBetween: 0,
+                }
+            }
+    });
+
     // section6 슬라이드
     var swiper6 = new Swiper(".event .mySwiper", {
         slidesPerView: 1,
@@ -1113,6 +1058,14 @@
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            800: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 1,
+            }
         },
     });
     var swiper7 = new Swiper(".news .mySwiper", {
@@ -1127,7 +1080,59 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            800: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 1,
+            }
+        },
     });
+
+    //모바일 적용 js
+    //모바일 nav
+    const NavMobile = function() {
+        $(".gnb>li>a").on("click",function(){
+            $(this).siblings().stop().slideToggle(300)
+            $(this).parent().siblings().find(".sub-navi").slideUp()
+        });
+    }
+        
+    //데스크탑 적용 js
+    const NavDesktop = function() {
+        $(".gnb>li>a").off("click");
+        //메뉴 슬라이드
+        $(".sub-navi ul li a").on("mouseenter",function(){
+            $(".sub-navi ul li a").css("color", "#bbbbbb");
+            $(this).css("color", "#000");
+        }).on("mouseleave", function() {
+            $(".sub-navi ul li a").css("color", "#000");
+        });
+        $(".gnb").on("mouseenter", function() {
+            $("nav").addClass("on");
+            console.log("mouse entered")
+        }).on("mouseleave", function() {
+            $("nav").removeClass("on");
+        })
+
+    };
+    const HandleResponsiveEvent = function() {
+        const winWidth = $(window).width();
+        if(winWidth >= 992) {
+            NavDesktop();
+            
+        } else if(winWidth < 992) {
+            NavMobile();
+        }
+    }
+
+    $(window).on("resize", function() {
+        HandleResponsiveEvent();
+    });
+    HandleResponsiveEvent();
+
+
 </script>
 <script src="./js/scrollTrigger.js"></script>
 </html>
