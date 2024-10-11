@@ -111,7 +111,7 @@
         position: relative;
         top: unset;
         left: unset;
-        right: unset;
+        right: 0;
         box-shadow: unset;
         overflow: unset;
         display: flex;
